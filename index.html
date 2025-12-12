@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>中职财经商贸课程平台 - 示范站</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <img src="assets/img/logo.png" alt="logo" class="logo"/>
+        <h1>中职财经商贸课程平台</h1>
+      </div>
+      <nav class="topnav">
+        <a href="#dashboard">首页</a>
+        <a href="#courses">课程</a>
+        <a href="#materials">资源</a>
+        <a href="#assignments">作业</a>
+        <a href="#discuss">讨论</a>
+        <button id="loginBtn" class="btn">登录</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <h2>欢迎使用中职财经商贸在线学习平台（示范）</h2>
+      <p>整合课程资料、在线测试、课堂签到、讨论区与成绩管理，支持教师与学生角色。</p>
+      <div class="cta">
+        <button onclick="openCourse('acc101')" class="btn primary">进入示范课程</button>
+        <button onclick="openMaterialFolder()" class="btn">查看资源</button>
+      </div>
+    </section>
+
+    <section id="courses" class="section">
+      <h2>课程目录</h2>
+      <div class="course-list">
+        <div class="course" data-course="acc101">
+          <h4>会计基础（acc101）</h4>
+          <p>课程介绍：覆盖会计基础、账务处理与简单报表编制。</p>
+          <div class="course-actions">
+            <button onclick="openCourse('acc101')" class="btn">进入课程</button>
+            <button onclick="enroll('acc101')" class="btn">选修</button>
+          </div>
+        </div>
+        <div class="course" data-course="biz101">
+          <h4>商务礼仪（biz101）</h4>
+          <p>课程介绍：涵盖职业形象、商务沟通与服务礼仪。</p>
+          <div class="course-actions">
+            <button onclick="openCourse('biz101')" class="btn">进入课程</button>
+            <button onclick="enroll('biz101')" class="btn">选修</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="materials" class="section">
+      <h2>教学资源</h2>
+      <ul class="materials-list">
+        <li><a href="materials/syllabus.pdf" target="_blank">课程大纲（syllabus.pdf）</a></li>
+        <li><a href="materials/lesson1.pdf" target="_blank">第1讲（lesson1.pdf）</a></li>
+      </ul>
+    </section>
+
+    <section id="discuss" class="section">
+      <h2>讨论区</h2>
+      <div id="discussBoard" class="discussion">
+        <div class="post">
+          <h5>张老师 · 会计基础</h5>
+          <p>同学们请把第1章习题第5题写在讨论区并互评。</p>
+        </div>
+      </div>
+      <div class="newpost">
+        <textarea id="postContent" placeholder="写下你的问题或回复..."></textarea>
+        <button onclick="postDiscussion()" class="btn">发表</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>示范平台 · 中职财经商贸课程 · 版本：1.0</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
